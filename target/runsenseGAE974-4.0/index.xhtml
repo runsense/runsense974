@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+      
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <meta charset="utf-8"/>
+   
+    <h:outputScript library="primefaces" name="jquery/jquery.js" target="head" />
+    <h:outputScript library="primefaces" name="jquery/jquery-plugins.js" target="head" />
+    <title>runsenseV3</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #map-canvas {
+        position: absolute;
+        height: 100%;
+        width: 70%;
+        margin: 0px;
+        padding: 0px
+      }
+      #panel {
+        position: absolute;
+        top: 5px;
+        right: 1%;
+        width: 29%;
+        
+        z-index: 5;
+        background-color: #fff;
+        
+        border: 1px solid #999;
+      }
+    </style>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyeZ3cExaH9VHUhgK3rBsuymGSc-Y_UzA"></script>
+        <script src="Gmap.js"/>
+         
+    </h:head>
+    <h:body> 
+    <h:form id="panel" enctype="multipart/form-data;charset=UTF-8">
+     
+            <p:fragment id="frg_iti"  > 
+                    <p:inputText id="dep" style="width: 100%!important;" placeholder="départ" 
+                         >
+                        <p:ajax event="focus" onstart="additi('dep');" />
+
+
+                    </p:inputText>
+                       <p:inputText id="arv" style="width: 100%!important;" placeholder="arrivé" 
+                            >
+                                        <p:ajax event="focus" onstart="additi('arv');"  />
+
+                       </p:inputText>
+
+
+                 </p:fragment>
+                
+    </h:form>
+        <h:form id="map-canvas"></h:form>
+    </h:body>
+</html>

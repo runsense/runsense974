@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.0"
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+
+
+
+<!--<application>
+        <resource-handler>runsense.plateformeweb.ressource.CDNResourceHandler</resource-handler>
+</application>-->
+<navigation-rule>
+
+    <navigation-case>
+            <from-outcome>Web</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+    </navigation-case> 
+    <navigation-case>
+            <from-outcome>Enrg</from-outcome>
+            <to-view-id>/enrg.xhtml</to-view-id>
+            <redirect/>
+    </navigation-case>
+  
+</navigation-rule>
+<managed-bean>
+    <managed-bean-name>beanChg</managed-bean-name>
+    <managed-bean-class>app.bean.BeanChg</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope> 
+</managed-bean>
+
+
+</faces-config>
